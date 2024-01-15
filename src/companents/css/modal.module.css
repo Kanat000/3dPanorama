@@ -8,25 +8,45 @@
     justify-items: center;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.44);
-    backdrop-filter: blur(0.5);
+    backdrop-filter: blur(0.3vh);
 }
 .modalContent{
-    width: 80vw;
-    height: 80vh;
+    width: 90%;
     position: relative;
     background-color: white;
-    border-radius: 3vh;
-
+    border-radius: 10px;
+    transition: .3s ease-in-out;
 }
 .modalCloser{
-    width: 3vw;
-    height: 3vw;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background-color: white;
     border: 0.1vh solid black;
     outline: none;
     position: absolute;
-    top: -2vh;
-    right: -2vh;
+    top: -1.5vh;
+    right: -1.5vh;
     cursor: pointer;
+    transition: .3s ease-in-out;
+    font-size: 1em;
+}
+
+@media (max-width: 790px) {
+    .modalContent{
+        width: 95%;
+    }
+    .modalCloser{
+        top: 120%;
+        right: calc(50% - 20px);
+    }
+}
+@media (max-width: 550px) {
+    .modalContent{
+        width: 97%;
+    }
+    .modalCloser{
+        width: 35px;
+        height: 35px;
+    }
 }
